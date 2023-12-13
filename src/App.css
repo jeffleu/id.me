@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.heading {
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 24px;
+  margin-left: 100px;
+  text-align: left;
+}
+
+.purchases-wrapper {
+  margin-top: 75px;
+}
+
+.purchases-list {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  margin: 0 100px;
+}
+
+.purchase-row {
+  display: flex;
+  padding: 16px 36px;
+}
+
+.purchase-column {
+  /* border: 1px solid red; */
+  flex: 1 1 0px;
+  text-align: left;
+}
+
+.column-header {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.location-image {
+  height: 100px; 
+}
+
+.header-row {
+  border-bottom: 1px solid lightgray;
+}
