@@ -37,8 +37,53 @@
   }
 }
 
+.category-label {
+  border: 1px solid black;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 12px;
+}
+
+.category-label.apparel {
+  color: darkcyan;
+  border-color: darkcyan;
+}
+
+.category-label.automotive {
+  color: #D94130;
+  border-color: #FF8577;
+}
+
+.category-label.entertainment {
+  color: #2E5AAC;
+  border-color: #89A7E0;
+}
+
+.category-label.food {
+  color: orange;
+  border-color: orange;
+}
+
+.category-label.footwear {
+  color: yellowgreen;
+  border-color: yellowgreen;
+}
+
+.category-label.shopping {
+  color: #118632;
+  border-color: #98D4A9;
+}
+
+.category-label.travel {
+  color: purple;
+  border-color: purple;
+}
+
+.category-label.technology {
+  border-color: #CDCED9;
+}
+
 .column-header {
-  font-size: 1em;
   font-weight: 600;
 }
 
@@ -47,7 +92,7 @@
 }
 
 .header-row {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #E7E7ED;
   font-size: 16px;
 }
 
@@ -60,7 +105,17 @@
 }
 
 .location-image {
-  height: 50px; 
+  height: 40px; 
+}
+
+.more {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin-top: 27px;
+  padding: 0 10px;
+  position: absolute;
+  right: 124px;
 }
 
 .name {
@@ -77,12 +132,17 @@
   align-items: center;
   display: flex;
   flex: 1 1 0px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
 }
 
+.purchase-column.center, .purchase-column.category-header {
+  justify-content: center;
+  margin-left: -72px;
+}
+
 .purchases-list {
-  border: 1px solid lightgray;
+  border: 1px solid #E7E7ED;
   border-radius: 4px;
   margin: 0 100px;
 }

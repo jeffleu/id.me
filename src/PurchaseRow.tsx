@@ -1,4 +1,6 @@
+import Category from './Category';
 import { PurchaseType } from './types';
+import moreIcon from './more.png';
 import { formatDate, formatDescription, formatPrice } from './utils';
 
 type PropsType = {
@@ -20,13 +22,19 @@ const PurchaseRow = ({purchase}: PropsType) => {
 
       <div className="purchase-column">{formatDate(purchaseDate)}</div>
 
-      <div className="purchase-column">{category}</div>
+      <div className="purchase-column center">
+        <Category category={category}/>
+      </div>
 
       <div className="purchase-column">
         <span className="description">{formatDescription(description)}</span>
       </div>
 
       <div className="purchase-column price">{formatPrice(price)}</div>
+
+      <div className="more">
+        <img src={moreIcon}/>
+      </div>
     </div>
   );
 };
