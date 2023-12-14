@@ -2,10 +2,10 @@ import {useEffect, useState} from 'react';
 //3rd party libraries
 import { isBrowser, isMobile } from 'react-device-detect';
 // Components
-import PurchaseRow from './PurchaseRow';
+import PurchaseRow from './PurchaseRow/PurchaseRow';
 // Constants
-import { columnHeaderTitles } from './constants';
-import { PurchaseType } from './types';
+import { columnHeaderTitles } from './utils/constants';
+import { PurchaseType } from './utils/types';
 // CSS
 import './App.css';
 
@@ -34,14 +34,14 @@ const App = () => {
           {isBrowser && (
             <div className="purchase-row header-row">
               {columnHeaderTitles.map(title => (
-                <div className={`purchase-column column-header ${title.toLowerCase()}-header`}>{title}</div>
+                <div key={title} className={`purchase-column column-header ${title.toLowerCase()}-header`}>{title}</div>
               ))}
             </div>
           )}
 
           {purchases.map(purchase => {
             return (
-              <PurchaseRow purchase={purchase}/>
+              <PurchaseRow key={purchase.id} isMobile={isMobile} purchase={purchase}/>
             );
           })}
         </div>

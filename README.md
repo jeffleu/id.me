@@ -1,14 +1,10 @@
 ## Installation
 
-To install, simply run the following command to install the necessary dependencies:
+To run this application, simply run the following command to install the dependencies and start the local dev environment:
 ```
-yarn install
+yarn && yarn start
 ```
-Once the dependencies have completed installing, execute the following to run the app in development mode:
-```
-yarn start
-```
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A window should automatically open in your browser, but if it doesn't, you can go to [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Views
 
@@ -18,6 +14,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Links
 
-Purchase history endpoint: [https://storage.googleapis.com/marketplace-prod-7728-shop-cdn-e5e2/interview/data.json](https://storage.googleapis.com/marketplace-prod-7728-shop-cdn-e5e2/interview/data.json)
-
-Figma design: [https://www.figma.com/file/h3G2z8II4ZRM1gv3CCUHTq/Data-Table?node-id=0%3A1](https://www.figma.com/file/h3G2z8II4ZRM1gv3CCUHTq/Data-Table?node-id=0%3A1)
+- [Purchase history endpoint](https://storage.googleapis.com/marketplace-prod-7728-shop-cdn-e5e2/interview/data.json)
+- [Figma design](https://www.figma.com/file/h3G2z8II4ZRM1gv3CCUHTq/Data-Table?node-id=0%3A1)
