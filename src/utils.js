@@ -1,11 +1,11 @@
 // Formats date into "month day, year" format
-export const formatDate = (inputDate) => {
+export const formatDate = (inputDate, isMobile) => {
   const date = new Date(inputDate);
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const options = { year: 'numeric', month: isMobile ? 'short' : 'long', day: 'numeric' };
   return new Intl.DateTimeFormat('en-US', options).format(date);
 };
 
-// Format description
+// Format description to decode text
 export const formatDescription = (description) => {
   const parser = new DOMParser();
   const decodedText = parser.parseFromString(`<!doctype html><body>${description}`, 'text/html').body.textContent;

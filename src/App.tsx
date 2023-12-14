@@ -1,11 +1,17 @@
 import {useEffect, useState} from 'react';
+//3rd party libraries
+import { isBrowser, isMobile } from 'react-device-detect';
+// Components
 import PurchaseRow from './PurchaseRow';
-import { PurchaseType } from './types';
+// Constants
 import { columnHeaderTitles } from './constants';
+import { PurchaseType } from './types';
+// CSS
 import './App.css';
 
 const App = () => {
   const [purchases, setPurchases] = useState<Array<PurchaseType>>([]);
+  const platform = isMobile ? 'mobile' : 'desktop';
 
   const fetchData =  async () => {
     const response = await fetch('https://storage.googleapis.com/marketplace-prod-7728-shop-cdn-e5e2/interview/data.json');
@@ -19,17 +25,19 @@ const App = () => {
   
   return (
     <div className="App">
-      <div className="purchases-wrapper">
-        <div className="heading">
+      <div className={`purchase-wrapper-${platform}`}>
+        <div className={`heading-${platform}`}>
           Purchases
         </div>
 
-        <div className="purchases-list">
-          <div className="purchase-row header-row">
-            {columnHeaderTitles.map(title => (
-              <div className={`purchase-column column-header ${title.toLowerCase()}-header`}>{title}</div>
-            ))}
-          </div>
+        <div className={`purchases-list-${platform}`}>
+          {isBrowser && (
+            <div className="purchase-row header-row">
+              {columnHeaderTitles.map(title => (
+                <div className={`purchase-column column-header ${title.toLowerCase()}-header`}>{title}</div>
+              ))}
+            </div>
+          )}
 
           {purchases.map(purchase => {
             return (
